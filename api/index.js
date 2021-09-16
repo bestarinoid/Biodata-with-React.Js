@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 const { Client } = require('pg');
-const { dataUser } = require("./models");
+const { User } = require("./models");
 const db = require('./models')
 
 app.get('/select', (req, res) => {
