@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node ./biodata.js",
+    "start": "nodemon ./biodata.js",
     "devStart": "nodemon ./biodata.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

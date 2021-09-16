@@ -1,14 +1,13 @@
 const express = require("express");
 const app = express();
 
-const { Client } = require('pg');
-const { User } = require("./models");
+const { biodata } = require("./models");
 const db = require('./models')
 
-app.get('/select', (req, res) => {
-  dataUser.findAll({where: { id: 1}})
-  .then((users) => {
-    res.send(users);
+app.get('/biodata', (req, res) => {
+  biodata.findByPk(1)
+  .then((biodata) => {
+    res.send(biodata);
   })
   .catch((err) => {
     console.log(err);
@@ -16,7 +15,7 @@ app.get('/select', (req, res) => {
 })
 
 db.sequelize.sync().then((req) => {
-  app.listen(3000, () => {
-    console.log("server running");
+  app.listen(5001, () => {
+    console.log("server running PORT 5001");
   });
 });
